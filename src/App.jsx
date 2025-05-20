@@ -27,7 +27,7 @@ function App() {
           <sphereGeometry />
           <meshStandardMaterial wireframe color={"green"} />
         </mesh>
-        s
+
         <mesh rotation-y={Math.PI * 0.25} position-x={2} scale={1.5}>
           <boxGeometry />
           <meshStandardMaterial color={"orange"} />

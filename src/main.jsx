@@ -3,10 +3,12 @@ import "./index.css";
 import { Canvas } from "@react-three/fiber";
 import App from "./App";
 // import * as THREE from "three";
+import { Perf } from "r3f-perf";
 
 createRoot(document.getElementById("root")).render(
   <>
     <Canvas
+
     // flat
     // gl={{
     //   antialias: true,
@@ -20,6 +22,7 @@ createRoot(document.getElementById("root")).render(
     //   position: [3, 2, 6],
     // }}
     >
+      <Perf position="top-left" />
       <App />
     </Canvas>
   </>
