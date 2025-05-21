@@ -8,19 +8,19 @@ import { Perf } from "r3f-perf";
 createRoot(document.getElementById("root")).render(
   <>
     <Canvas
-
-    // flat
-    // gl={{
-    //   antialias: true,
-    //   toneMapping: THREE.ACESFilmicToneMapping,
-    //   outputColorSpace: THREE.SRGBColorSpace,
-    // }}
-    // camera={{
-    //   fov: 50,
-    //   near: 0.9,
-    //   far: -900,
-    //   position: [3, 2, 6],
-    // }}
+      shadows
+      // flat
+      // gl={{
+      //   antialias: true,
+      //   toneMapping: THREE.ACESFilmicToneMapping,
+      //   outputColorSpace: THREE.SRGBColorSpace,
+      // }}
+      // camera={{
+      //   fov: 50,
+      //   near: 0.9,
+      //   far: -900,
+      //   position: [3, 2, 6],
+      // }}
     >
       <Perf position="top-left" />
       <App />
