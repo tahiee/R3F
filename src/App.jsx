@@ -8,7 +8,6 @@ function App() {
   const theCube = useRef();
   const { camera, gl } = useThree();
   const directionlight = useRef();
-
   useHelper(directionlight, THREE.DirectionalLightHelper, 0.5);
 
   useFrame((s, d) => {
