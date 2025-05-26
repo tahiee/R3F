@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unknown-property */
-import { OrbitControls, useHelper } from "@react-three/drei";
+import { Environment, OrbitControls, useHelper } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import { useRef } from "react";
 import * as THREE from "three";
@@ -16,6 +16,7 @@ function App() {
 
   return (
     <>
+      <Environment preset="sunset" background />
       <OrbitControls args={[camera, gl.domElement]} />
       <directionalLight
         ref={directionlight}
