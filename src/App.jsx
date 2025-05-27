@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unknown-property */
 import {
-  Environment,
+  // Environment,
   OrbitControls,
   Stage,
   useHelper,
@@ -11,8 +11,11 @@ import * as THREE from "three";
 
 function App() {
   const theCube = useRef();
+
   const { camera, gl } = useThree();
+
   const directionlight = useRef();
+
   useHelper(directionlight, THREE.DirectionalLightHelper, 0.5);
 
   useFrame((s, d) => {
@@ -21,7 +24,7 @@ function App() {
 
   return (
     <>
-      <Environment preset="sunset" background />
+      {/* <Environment preset="sunset" background /> */}
       <OrbitControls args={[camera, gl.domElement]} />
       <directionalLight
         ref={directionlight}
@@ -47,7 +50,7 @@ function App() {
           radius: 4,
           offset: [0, 0.2],
         }}
-        environment={"sunset"}
+        // environment={"sunset"}
       >
         <mesh castShadow position-x={-2}>
           <sphereGeometry />
