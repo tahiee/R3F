@@ -1,5 +1,10 @@
 /* eslint-disable react/no-unknown-property */
-import { Environment, OrbitControls, useHelper } from "@react-three/drei";
+import {
+  Environment,
+  OrbitControls,
+  Stage,
+  useHelper,
+} from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import { useRef } from "react";
 import * as THREE from "three";
@@ -36,7 +41,14 @@ function App() {
         <meshStandardMaterial color={"yellow"} />
       </mesh>
 
-      <group>
+      <Stage
+        contactShadow={{
+          blur: 2,
+          radius: 4,
+          offset: [0, 0.2],
+        }}
+        environment={"sunset"}
+      >
         <mesh castShadow position-x={-2}>
           <sphereGeometry />
           <meshStandardMaterial color={"red"} />
@@ -52,7 +64,7 @@ function App() {
           <boxGeometry />
           <meshStandardMaterial color={"orange"} />
         </mesh>
-      </group>
+      </Stage>
 
       {/* <CustomeGem /> */}
     </>
